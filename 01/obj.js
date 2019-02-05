@@ -29,4 +29,6 @@ console.log(p1, assignedPoint); // it's ok but...
 
 // 3 - solution , reduce
 
-// 4 - external libs https://lodash.com/
+// 4 - external libs https://lodash.com/, immutable.js
+
+// 5 - Advanced vanilla constructs, Reflection, Proxy, Object.freeze ...
