@@ -19,7 +19,7 @@
 ## Necessity
 There are two endpoints, http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/PersoneLegacy and http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/people, the first is the old model (*Legacy*) and the second is the new (*New*).
 
-For some reason the Legacy has some data that the New has not and there are some record that are still not migrated from the old to the new, but we should rely only on the New and pick from the Legacy the information for the team name and update the flag accordingly.
+For some reason the Legacy has some data that the New has not and there are some record that are still not migrated from the old to the new. We should rely only on the New and pick from the Legacy the information for the team name and update the flag accordingly.
 
 The Legacy and the New are linked by this relation: **PersoneLegacy.Matricola = people.departmentId**.
 
