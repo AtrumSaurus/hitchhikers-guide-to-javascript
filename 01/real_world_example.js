@@ -21,7 +21,25 @@ const getPeople = async () => {
       }
     );
 
-    const convertedLegacyPeople = legacyPeople.map(lP => legacyPersonToNewPerson(lP));
+    const legacyPersonToNewPersonMap = {
+      id: 'id',
+      Creato: 'createdAt',
+      Nome: 'firstName',
+      Cognome: 'lastName',
+      Mansione: 'jobTitle',
+      Matricola: 'departmentId',
+      NomeDelTeam: 'teamName',
+    };
+
+    const convertedLegacyPeople = legacyPeople.map(lP => {
+      const newP = Object.keys(lP).reduce((acc, prop) => (
+        legacyPersonToNewPersonMap[prop] ? { [legacyPersonToNewPersonMap[prop]]: lP[prop], ...acc } : { [prop] : lP[prop], ...acc}
+      ), {});
+
+      newP.fullName = `${newP.firstName} ${newP.lastName}`;
+      
+      return newP;
+    });
 
     people = people.map(p => {
       const legacyPerson = convertedLegacyPeople.find(clP => clP.departmentId === p.departmentId);
