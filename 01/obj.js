@@ -27,7 +27,7 @@ const assignedPoint = Object.assign({}, p1, { x: 10, y: 40 });
 
 console.log(p1, assignedPoint); // it's ok but...
 
-// 3 - solution reduce
+// 3 - solution reduce, it's like an overkill
 
 // 4 - external libs https://lodash.com/, immutable.js
 
