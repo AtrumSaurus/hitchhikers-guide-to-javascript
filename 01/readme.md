@@ -26,3 +26,6 @@ Print format: <full name> @ <creation date> | <job title> -> <team name>
 
 ## Solution
 In this directory run `npm install` then type `node real_world_example.js` in your shell!
+
+### For Browser
+Pick `real_world_example_browser.js` file and copy in your Chrome's snippet editor, then run it!
