@@ -22,5 +22,7 @@ For some reason the Legacy has some data that tha New has not and there are some
 
 We need to print every person's full name, creation date, job title and team name. The Legacy and the New have this relation : LeacyPeople.Matricola = people.departmentId. We should only print those who have a team and should be orderd by creation date from the last to the first.
 
+Print format: <full name> @ <creation date> | <job title> -> <team name>
+
 ## Solution
 In this directory run `npm install` then type `node real_world_example.js` in your shell!
