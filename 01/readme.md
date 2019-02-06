@@ -20,7 +20,7 @@
 There are two endpoints, http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/PersoneLegacy and http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/people, the first is the old model and the second is the new. 
 For some reason the Legacy has some data that the New has not and there are some record that are still not migrated from the old to the new, so it's necessary to merge the data. The model chosen for the "visualization" is (of course) the New one.
 
-We need to print every person's full name, creation date, job title and team name. The Legacy and the New have this relation : LeacyPeople.Matricola = people.departmentId. We should only print those who have a team and should be orderd by creation date from the last to the first.
+We need to print every person's full name, creation date, job title and team name. The Legacy and the New have this relation : PersoneLegacy.Matricola = people.departmentId. We should only print those who have a team and should be orderd by creation date from the last to the first.
 
 Print format: <full name> @ <creation date> | <job title> -> <team name>
 
