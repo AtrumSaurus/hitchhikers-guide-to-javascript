@@ -60,7 +60,7 @@ const mergeData = ({ legacyPeople, people }) => {
 async function main() {
   let people = await mergeData(await getPeople());
 
-  people = people.filter(p => p.hasTeam && p.teamName).sort((p1, p2) => Date.parse(p1.createdAt) - Date.parse(p2.createdAt));
+  people = people.filter(p => p.hasTeam).sort((p1, p2) => Date.parse(p1.createdAt) - Date.parse(p2.createdAt));
   people.map(p => printPerson(p));
 }
 

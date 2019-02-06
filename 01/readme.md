@@ -19,15 +19,15 @@
 ## Necessity
 There are two endpoints, http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/PersoneLegacy and http://5bbf0e9b72de1d0013253709.mockapi.io/api/v1/people, the first is the old model (*Legacy*) and the second is the new (*New*).
 
-For some reason the Legacy has some data that the New has not and there are some record that are still not migrated from the old to the new, so it's necessary to merge the data. The model chosen for the "visualization" is (of course) the New one.
+For some reason the Legacy has some data that the New has not and there are some record that are still not migrated from the old to the new, but we should rely only on the New and pick from the Legacy the information for the team name and update the flag accordingly.
 
-We need to print every person's full name, creation date, job title and team name.
+The Legacy and the New are linked by this relation: **PersoneLegacy.Matricola = people.departmentId**.
 
-The Legacy and the New are linked by this relation: **PersoneLegacy.Matricola = people.departmentId**. 
+We should only print, using the format right below, those who have a team and should be orderd by creation date from the last to the first.
 
-We should only print those who have a team and should be orderd by creation date from the last to the first.
+Print format: `<full name> @ <creation date> | <job title> -> <team name>`
 
-Print format: [full name] @ [creation date] | [job title] -> [team name]
+If for some reason the team name has no value but the flag is still valid, whe should print "None" as team name.
 
 ## Solution
 In this directory run `npm install` then type `node real_world_example.js` in your shell!

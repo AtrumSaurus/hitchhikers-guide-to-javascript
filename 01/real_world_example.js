@@ -26,7 +26,7 @@ const getPeople = async () => {
 
 }
 
-const printPerson = ({ fullName, createdAt, jobTitle, teamName }) => console.log(`${fullName} @ ${createdAt} | ${jobTitle} -> ${teamName}\n`);
+const printPerson = ({ fullName, createdAt, jobTitle, teamName = 'None'}) => console.log(`${fullName} @ ${createdAt} | ${jobTitle} -> ${teamName}\n`);
 
 const mergeData = ({ legacyPeople, people }) => {
 
@@ -67,7 +67,7 @@ const mergeData = ({ legacyPeople, people }) => {
 async function main() {
   let people = await mergeData(await getPeople());
 
-  people = people.filter(p => p.hasTeam && p.teamName).sort((p1, p2) => moment(p1.createdAt) - moment(p2.createdAt));
+  people = people.filter(p => p.hasTeam).sort((p1, p2) => moment(p1.createdAt) - moment(p2.createdAt));
   people.map(p => printPerson(p));
 }
 
