@@ -20,7 +20,7 @@ console.log(result);
 
 // es6 way
 
-const isFruit = fruit=>fruit !== 'cat';
+const isFruit = fruit => fruit !== 'cat';
 
 const resultEs6 = fruits.filter(isFruit);
 
@@ -34,18 +34,18 @@ const catFromThirdParty = {
     Padrone: 'Sabrina',
     Colore: 'nero',
     Magico: 'Si',
-}
+};
 
 const ourCatModel = {
     firstName: 'Silvestro',
     lastName: 'Gatto',
     owner: 'Granny',
     color: 'biannco e nero',
-}
+};
 
 // vogliamo trasformare il primo nel secondo senza scrivere tropper righe...
 
-const translationRules = ()=> ({
+const translationRules = () => ({
     Nome: 'firstName',
     Cognome: 'lastName',
     Padrone: 'owner',
@@ -54,6 +54,8 @@ const translationRules = ()=> ({
 
 
 const translated = Object.keys(catFromThirdParty)
-.reduce((acc, key) => (translationRules()[key] ? {[translationRules()[key]]: catFromThirdParty[key], ...acc} : {...acc}), {});
+.reduce((acc, key) => (translationRules()[key] ?
+  {[translationRules()[key]]: catFromThirdParty[key], ...acc} :
+  {...acc}), {});
 
 console.log(translated);

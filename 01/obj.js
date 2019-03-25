@@ -1,7 +1,7 @@
 const point1 = {
     x: 10,
     y: 20,
-}
+};
 
 const point2W = point1;
 
