@@ -4,7 +4,7 @@ const getPeople = async () => {
     let legacyPeople = [];
     let localPeople = [];
 
-    try{
+    try {
         const newPResponse = await fetch(`${apiPath}/people`);
         const legacyPResponse = await fetch(`${apiPath}/PersoneLegacy`);
 
