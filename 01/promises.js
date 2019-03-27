@@ -5,16 +5,19 @@ function getFromDb ({ id, tag }, cb) {
       id: 10,
       txt: 'foo',
       tag: 'A',
+      answer: 42,
     },
     {
       id: 100,
       txt: 'woo',
       tag: 'B',
+      answer: null,
     },
     {
       id: 1000,
       txt: 'zoo',
       tag: 'A',
+      answer: 24,
     },
   ];
 
