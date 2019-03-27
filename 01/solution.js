@@ -34,31 +34,40 @@ console.log(JSON.stringify(Array(11))); // just to see
 
 // ## Objects
 // 1. Create a person object having the following properties: firstName, lastName, age, car each set to null.
-const person = {
-    firstName: null,
-    lastName: null,
-    age: null,
-    car: null,
-};
+const Hero = ({
+                firstName = null,
+                lastName = null,
+                age = null,
+              }) => ({
+  firstName,
+  lastName,
+  age,
+  car: null,
+  print: function(){ return `${this.firstName} ${this.lastName}${this.car ? ` drives \n\t${this.car.print()}` : ''}` }
+});
 
 // 2. Create a car object storing the model and the plate.
-const car = {
-    model: 'Bat Mobile',
-    plate: 'XX 111 YY'
-};
+const Car = ({
+               model = 'Bat Mobile',
+               plate = 'BT 666 DK',
+             } = {}) => ({
+  model,
+  plate,
+  print: function() { return `${this.model} - ${this.plate}` }
+});
 
 // 3. Create two DIFFERENT person objects and assign the car object of before
-const robin = Object.assign({}, person, { firstName: 'Robin', lastName: 'Red', age: 22 })
-const batman = Object.assign({}, person, { firstName: 'Batman', lastName: 'Knight', age: 35 })
+const robin = Hero({ firstName: 'Robin', lastName: 'The Boy Wonder', age: 22 });
+const batman = Hero({ firstName: 'Batman', lastName: 'The Dark Knight', age: 35 });
 
-batman.car = car;
+batman.car = Car();
 robin.car = batman.car;
 
 console.log(batman, robin);
 
 // 4. Change the car model and plate properties. What happened?
-car.model = 'Robin Mobile';
-car.plate = 'AA 222 BB';
 
+robin.car.model = 'Robin Mobile';           //  car.model = 'Robin Mobile';
+robin.car.plate = 'RB 222 BB';              //  car.plate = 'AA 222 BB';
 
-console.log(batman, robin);
+console.log(batman.print(), robin.print());

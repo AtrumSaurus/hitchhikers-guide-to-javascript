@@ -1,7 +1,6 @@
 const apiPath = 'https://5bbf0e9b72de1d0013253709.mockapi.io/api/v1';
 
 const getPeople = async () => {
-
     let legacyPeople = [];
     let localPeople = [];
 
@@ -16,8 +15,7 @@ const getPeople = async () => {
     } finally {
       return { localPeople, legacyPeople }
     }
-
-}
+};
 
 const printPerson = ({ fullName, createdAt, jobTitle, teamName }) => console.log(`${fullName} @ ${createdAt} | ${jobTitle} -> ${teamName}\n`);
 
@@ -39,7 +37,7 @@ const mergeData = ({ legacyPeople, people }) => {
     ), {});
 
     newP.fullName = `${newP.firstName} ${newP.lastName}`;
-    
+
     return newP;
   });
 
@@ -55,7 +53,7 @@ const mergeData = ({ legacyPeople, people }) => {
   });
 
   return people;
-}
+};
 
 async function main() {
   let people = await mergeData(await getPeople());
