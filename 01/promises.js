@@ -1,4 +1,4 @@
-function getFromDb ({ id, tag }, cb){
+function getFromDb ({ id, tag }, cb) {
   const ms = 2000;
   const returnData = [
     {
