@@ -9,9 +9,9 @@
 3. Find a way to create an array of only even numbers using just 1 line of code.
 
 ## Objects
-1. Create a person object having the following properties: firstName, lastName, age, car each set to null.
-2. Create a car object storing the model and the plate.
-3. Create two person objects and assign the car object of before
+1. Create a Hero object having the following properties: firstName, lastName, age, car each set to null.
+2. Create a Car object storing the model and the plate.
+3. Create two Hero objects and assign the car object of before
 4. Change the car model and plate properties. What happened?
 
 # Real World Example
