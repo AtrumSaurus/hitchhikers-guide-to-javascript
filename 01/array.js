@@ -26,7 +26,12 @@ const resultEs6 = fruits.filter(isFruit);
 
 console.log(resultEs6);
 
-// 2 - reduce
+// 2 - map
+
+const mapped = fruits.filter(isFruit).map(f => f.toLowerCase());
+console.log(mapped);
+
+// 3 - reduce
 
 const l = [1, -10, 20, 10, 41, -20];
 
