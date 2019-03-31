@@ -28,7 +28,7 @@ console.log(resultEs6);
 
 // 2 - map
 
-const mapped = fruits.filter(isFruit).map(f => f.toLowerCase());
+const mapped = fruits.filter(isFruit).map(f => f.toUpperCase());
 console.log(mapped);
 
 // 3 - reduce
