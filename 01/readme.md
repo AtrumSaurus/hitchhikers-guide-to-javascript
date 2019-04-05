@@ -14,6 +14,8 @@
 3. Create two Hero objects and assign the car object of before
 4. Change the car model and plate properties. What happened?
 
+A solution for these sections can be found in file `solution.js`.
+
 # Real World Example
 
 ## Necessity
